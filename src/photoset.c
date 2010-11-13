@@ -144,7 +144,8 @@ flickcurl_build_photosets(flickcurl* fc, xmlXPathContextPtr xpathCtx,
       } else if(!strcmp(attr_name, "photos")) {
         ps->photos_count = atoi(attr_value);
         free(attr_value);
-      }
+      } else
+      	free(attr_value);
     }
 
     /* Walk children nodes for <title> or <description> elements */
